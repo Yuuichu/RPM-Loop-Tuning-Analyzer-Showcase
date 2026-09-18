@@ -1,5 +1,7 @@
 # Method
 
+> **English** | [简体中文](method.zh-CN.md)
+
 The tool answers one question: **given a set of steady loops labelled with nominal RPMs, what is the true relationship between RPM and acoustic pitch, and what does each individual loop need in order to sit on it?**
 
 It is solved in four stages.

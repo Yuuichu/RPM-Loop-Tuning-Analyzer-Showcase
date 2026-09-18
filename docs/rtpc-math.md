@@ -1,5 +1,7 @@
 # RTPC mathematics and output semantics
 
+> **English** | [简体中文](rtpc-math.zh-CN.md)
+
 This document defines exactly what the exported numbers mean, so they can be checked by hand against the CSVs in `examples/`.
 
 ## Notation

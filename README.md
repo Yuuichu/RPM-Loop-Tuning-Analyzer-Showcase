@@ -1,5 +1,7 @@
 # RPM Loop Tuning Analyzer
 
+> **English** | [简体中文](README.zh-CN.md)
+
 A data-driven RPM → pitch mapping tool for Wwise vehicle audio: measure a set of steady engine loops with known nominal RPMs, re-learn the true RPM → acoustic-pitch relationship, and emit the **Asset Offset** and **Voice Pitch RTPC** control points needed to reproduce it in Wwise.
 
 ## Why I Built This
