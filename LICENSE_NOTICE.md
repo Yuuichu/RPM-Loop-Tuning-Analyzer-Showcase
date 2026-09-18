@@ -2,9 +2,7 @@
 
 ## RPM Loop Tuning Analyzer
 
-The project's repository does not currently contain a `LICENSE` file, so **this showcase makes no licence claim** and does not reproduce one. Absence of a licence here should not be read as permission to reuse the code.
-
-If a licence is intended, adding the canonical `LICENSE` file to the main repository is the correct first step; this notice should then be updated to match.
+Released under the **MIT licence** (`Copyright (c) 2026 Yuuichu`). The full licence text is included in this showcase as `LICENSE`, and the same file lives in the development repository.
 
 ## Third-party software
 
