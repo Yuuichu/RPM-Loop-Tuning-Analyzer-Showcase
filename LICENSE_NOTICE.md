@@ -27,4 +27,4 @@ None of these are vendored into this repository; they are installed from PyPI pe
 
 **No audio is included** in this showcase.
 
-The charts and CSVs under `demo/` and `examples/` were produced from a **synthetic sample fixture** created for testing, not from any production or client recording. No production audio, project or asset names are included.
+The example tables under `examples/` were produced from a **synthetic sample fixture** created for testing, not from any production or client recording. No production audio, project or asset names are included.

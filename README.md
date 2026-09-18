@@ -2,8 +2,6 @@
 
 A data-driven RPM → pitch mapping tool for Wwise vehicle audio: measure a set of steady engine loops with known nominal RPMs, re-learn the true RPM → acoustic-pitch relationship, and emit the **Asset Offset** and **Voice Pitch RTPC** control points needed to reproduce it in Wwise.
 
-![Master RPM-to-pitch mapping for the sample fixture](demo/master_curve.png)
-
 ## Why I Built This
 
 Engine and exhaust loops are usually tuned against a "Smart Pitch Curve" that approximates how a recorded loop's pitch actually changes with RPM. Four problems come with that workflow:
@@ -53,17 +51,6 @@ flowchart TD
 - **Monotone by construction.** The master curve is a robust `log(RPM + K)` baseline plus a monotone non-parametric residual, evaluated with PCHIP interpolation, so pitch can never fold back on itself at any RPM.
 - **Diagnostics are part of the output.** Every asset carries a confidence (pair quality blended with graph coverage) and a status such as `LOW_CONFIDENCE`, `POOR_GLOBAL_FIT`, `NON_MONOTONIC_MEASUREMENT` or `OUTLIER`. Quantisation residuals are preserved rather than discarded.
 
-## Demo
-
-| Artifact | What it shows |
-|---|---|
-| `demo/master_curve.png` | Measured acoustic pitch per loop against the fitted master mapping |
-| `demo/per_asset_rtpc.png` | Per-asset Voice Pitch RTPC curves, each crossing 0 cents at its own native RPM |
-| `examples/example_asset_offsets.csv` | The Asset Offset table: measured vs. model pitch, raw offset, integer offset, confidence, status |
-| `examples/example_rtpc_control_points.csv` | Per-asset RTPC control points: RPM → pitch, with the final combined pitch |
-
-These were produced by the tool from a sample engine/exhaust fixture (synthetic test data), not from any production project.
-
 ## Architecture
 
 ```text
@@ -101,7 +88,7 @@ Sole author: DSP design, the pairwise measurement stage, the robust solver, the 
 
 This is a portfolio showcase repository for a private project.
 
-Included: the method and formula documentation, the measurement/solver/mapping modules, the exported demo tables and charts for a sample fixture, and the desktop UI. Excluded: the full test suite, the UI implementation, and any production audio.
+Included: the method and formula documentation, the measurement/solver/mapping modules in `selected-code/`, an example Asset Offset table and RTPC control-point table in `examples/`, and the desktop UI. Excluded: the full test suite, the UI implementation, and any production audio.
 
 ## Tech Stack
 
